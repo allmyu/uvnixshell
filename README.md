@@ -17,3 +17,5 @@ To Use
 clone this repo
 
 run direnv allow in terminal in the created directory
+
+then change your interpriter to /.venv/bin/python3.12
