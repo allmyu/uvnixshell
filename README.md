@@ -1,0 +1,2 @@
+# uvnixshell
+uv nix shell
