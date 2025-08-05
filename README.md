@@ -18,4 +18,4 @@ clone this repo
 
 run direnv allow in terminal in the created directory
 
-then change your interpriter to /.venv/bin/python3.12
+then change your interpreter to /.venv/bin/python3.12
