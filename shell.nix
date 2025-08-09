@@ -1,17 +1,38 @@
+{
+  pkgs ? import <nixpkgs> { },
+}:
 let
-  nixpkgs = fetchTarball "https://github.com/NixOS/nixpkgs/tarball/nixos-25.05";
-  pkgs = import nixpkgs { /*config = {}; overlays = [];*/ };
+namez = "python development environment";
 in
+(pkgs.buildFHSEnv {
+  name =  namez;#"simple-x11-env";
+  targetPkgs =
+    pkgs:
+    (with pkgs; [
+        libz
+        uv
+        udev #device manager lib
+        alsa-lib #sound managment lib
+    ])
+    ++ (with pkgs.xorg; [ #xorg libraries that could be required add any x11 libraries here
+      libX11
+      libX11.dev
+      libXcursor
+      libXrandr
+    ]);
+  multiPkgs =
+    pkgs:
+    (with pkgs; [
+      udev
+      alsa-lib
+    ]);
+        #the runscript creates the uv project and venv to use uv to manage the project
+		#change the python version by changing 3.12 to something else
+		#change bash at the end to your terminal of choice
+  runScript = "
+              uv init .
+              uv venv --python 3.12
 
-pkgs.mkShellNoCC {
-#all this dose is run uv init in the cwd then creates a virtual eniroment for python 3.12, then runs the echo
-	shellHook =
-	  ''
-    	    uv init .
-	    uv venv .venv --python 3.12
-	    echo "Hello shell"
-
-	'';
-	
-  #packages = with pkgs; [];
-}
+              echo '${namez}'
+              bash";
+}).env
