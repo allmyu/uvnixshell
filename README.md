@@ -3,14 +3,14 @@
 uv nix shell template
 
 Hello, I am new to nixos but this is what i was able to come up with for python development on NixOs. We are using buildFHSenv because python packages have dependacies in C libraries. Some of those packages have hard coded FHS paths to dependacies and because NixOs dose not follow FHS we have errors when we import those packages. buildFHSenv makes a shell with a FHS compatible file system which we use here to fix our dependace issues.
-
+______________________________________________________________________________
 makes a FHS compatible shell for python development with uv package managment
-
+______________________________________________________________________________
 Dependancies
 
   nothin!!
 
-
+_______________________________________________________________________________
 To Use
 
 do the following IN YOUR TERMINAL!!!
