@@ -12,7 +12,9 @@ Dependancies
 
 
 To Use
-IN YOUR TERMINAL!!!
+
+do the following IN YOUR TERMINAL!!!
+
 make your project directory
 
 clone this repo in to your project directory or copy this shell.nix file into a shell.nix file in your project direcotry
@@ -20,17 +22,20 @@ clone this repo in to your project directory or copy this shell.nix file into a 
 run nix-shell in your terminal in the project directory
 
 open your IDE from this terminal window. 
+
     I belive this makes the ide think it is in a fhs system and loads the dynamic linkers correctly
 
 then change your interpreter to /.venv/bin/python3.*
 _________________________________________________
 everytime you open your project you will need to 
+  
   open your project direcotry in your terminal
   run nix-shell
   open you ide
 
-
+__________________________________________________
 Key Notes
+
 [direnv](https://direnv.net/) | will not work with this shell, it gets caught in a infinit cycle of trying changing into the virtual enviroment.
   i think this is because it dosent recognize buildFHSenv as a virtual enviroment but it sees the .envrc and shell.nix file so it goes to create a virtual enviroment, then once that virtual enviroment is created, it goes on in an infinit cycle of not reconizing the virtual enviroment then creating a virtual enviroment.
   i will need to work this out later.
