@@ -23,7 +23,7 @@ run nix-shell in your terminal in the project directory
 
 open your IDE from this terminal window. 
 
-    I belive this makes the ide think it is in a fhs system and loads the dynamic linkers correctly
+  I belive this makes the ide think it is in a fhs system and loads the dynamic linkers correctly
 
 then change your interpreter to /.venv/bin/python3.*
 _________________________________________________
