@@ -34,7 +34,9 @@ then change your interpreter to /.venv/bin/python3.*
   depending on your ide it might automatically do this
     
  u are ready to go
+   
    ** when adding packages with uv use **
+   
         uv add pkg --active
 
 **you will need to run uv sync every time you open your project**
