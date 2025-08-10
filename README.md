@@ -25,13 +25,21 @@ open your IDE from this terminal window.
 
   I belive this makes the ide think it is in a fhs system and loads the dynamic linkers correctly
 
+open your project in your ide
+
 then change your interpreter to /.venv/bin/python3.*
+
+finally u are ready to go
+
+**you will need to uv sync every time you open your project**
 _________________________________________________
 everytime you open your project you will need to 
   
   open your project direcotry in your terminal
   run nix-shell
-  open you ide
+  open your ide
+  open your project
+  run uv sync
 
 __________________________________________________
 Key Notes
