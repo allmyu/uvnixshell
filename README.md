@@ -17,8 +17,10 @@ do the following IN YOUR TERMINAL!!!
 
 make your project directory
 
-clone this repo in to your project directory or copy this shell.nix file into a shell.nix file in your project direcotry
+clone this repo in to your project directory 
 
+    git clone https://github.com/allmyu/uvnixshell.git .
+    
 run nix-shell in your terminal in the project directory
 
 open your IDE from this terminal window. 
@@ -28,10 +30,12 @@ open your IDE from this terminal window.
 open your project in your ide
 
 then change your interpreter to /.venv/bin/python3.*
+    
+  depending on your ide it might automatically do this
+    
+ u are ready to go
 
-finally u are ready to go
-
-**you will need to uv sync every time you open your project**
+**you will need to run uv sync every time you open your project**
 _________________________________________________
 everytime you open your project you will need to 
   
